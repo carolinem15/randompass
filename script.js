@@ -30,6 +30,8 @@ if (passSpecialCh === true) {
 console.log(pswd)
 
 // Randomly sorting through the pswd array using Fisher Yates method
+
+console.log(pswd);
 var text = ""
 
 for (i = pswd.length -1; i > 0; i--) {
@@ -41,9 +43,7 @@ for (i = pswd.length -1; i > 0; i--) {
 }
 
 pswd.length = parseInt(characterLength);
-var text = pswd
 console.log(pswd)
-
 
 document.getElementById("password").innerHTML = text;
 
