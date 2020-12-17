@@ -29,14 +29,17 @@ if (true === true) {
 }
 console.log(pswd)
 
-var i = characterLength;
-var text = "",
+var i;
+var length = characterLength;
+var text = ""
 
 for (i = 0; i < pswd.length; i++) {
-  text += pswd[i] + "<br>";
+  text += pswd[i];
 }
 
 console.log(pswd)
+
+document.getElementById("password").innerHTML = text;
 
 // Write password to the #password input
 function writePassword() {
