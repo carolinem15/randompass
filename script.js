@@ -29,11 +29,24 @@ if (true === true) {
 }
 console.log(pswd)
 
-var i;
-var length = characterLength;
+// var i;
+
+
+// for (i = 0; i < pswd.length; i++) {
+//   text += pswd[i];
+// }
+
+// Randomly sorting through the pswd array using Fisher Yates method
+
+// pswd.length = parseInt(characterLength);
+// console.log(pswd);
 var text = ""
 
-for (i = 0; i < pswd.length; i++) {
+for (i = pswd.length -1; i > 0; i--) {
+  j = Math.floor(Math.random() * i)
+  k = pswd[i]
+  pswd[i] = pswd[j]
+  pswd[j] = k
   text += pswd[i];
 }
 
