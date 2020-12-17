@@ -33,6 +33,7 @@ console.log(pswd)
 // Randomly sorting through the pswd array using Fisher Yates method
 
 console.log(pswd);
+
 var text = ""
 
 for (i = pswd.length -1; i > 0; i--) {
@@ -47,11 +48,9 @@ pswd.length = parseInt(characterLength);
 var text = pswd.join("")
 console.log(pswd)
 
-document.getElementById("password").innerHTML = text;
-
+// document.getElementById("password").innerHTML = text;
+return text;
 };
-
-generatePassword()
 
 // Write password to the #password input
 function writePassword() {
