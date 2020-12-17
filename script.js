@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 const pswd = [];
 // Prompts and confirms to gather password information
+function generatePassword() {
 var characterLength = prompt("How many characters would you like your password to be? Please choose between 8 and 128")
 console.log(characterLength)
 
@@ -43,9 +44,14 @@ for (i = pswd.length -1; i > 0; i--) {
 }
 
 pswd.length = parseInt(characterLength);
+var text = pswd.join("")
 console.log(pswd)
 
 document.getElementById("password").innerHTML = text;
+
+};
+
+generatePassword()
 
 // Write password to the #password input
 function writePassword() {
