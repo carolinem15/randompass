@@ -1,39 +1,47 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var characterLength = x
-var number = 0123456789
-var lowercase = abcdefghijklmnopqrstuvwxyz
-var letter = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
-var specialCharacters = ~!@#%^&*()
+const pswd = [];
+// Prompts and confirms to gather password information
+var characterLength = prompt("How many characters would you like your password to be? Please choose between 8 and 128")
+console.log(characterLength)
+
+var passNumbers = confirm("Click OK to include numbers.")
+if (true === true) {
+  pswd.push("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")
+}
+console.log(pswd)
+
+var passUppercase = confirm("Click OK to include uppercase letters.")
+if (true === true) {
+  pswd.push("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
+}
+console.log(pswd)
+
+var passLowercase = confirm("Click OK to include lowercase letters.")
+if (true === true) {
+  pswd.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
+}
+console.log(pswd)
+
+var passSpecialCh = confirm("Click OK to include special characters.")
+if (true === true) {
+  pswd.push("~", "!", "@", "#", "%", "^", "&", "*", "(", ")")
+}
+console.log(pswd)
+
+var i = characterLength;
+var text = "",
+
+for (i = 0; i < pswd.length; i++) {
+  text += pswd[i] + "<br>";
+}
+
+console.log(pswd)
 
 // Write password to the #password input
 function writePassword() {
-  for (i = 0; i < password.length; i++) {
-    text += password[i] + "<br>";
-  };
-  
-var password = generatePassword() {
-  var characterLength = prompt("How many characters would you like your password to be? Note: your password must be between 8 and 128 characters.");
-console.log(characterLength);
-var number = confirm("Would you like your password to include numbers?");
-if true {
-  var number = Math.floor(Math.random() * 10) + 1,);
-}
-console.log(number);
-var uppercase = confirm("Would you like your password to include uppercase letters?");
-if true {
-  var letter = letters[Math.floor(Math.random() * letters.length)];
-} else { 
-  var lowercase = lowercase[Math.floor(Math.random() * lowercase.length)]; }
-console.log(uppercase);
-var specialCharacters = confirm("Would you like your password to include special characters?");
-if true {
-  var specialCharacters = Math.floor(Math.random() * specialCharacters.length)];
-}
-console.log(specialCharacters);
-}
-
-var passwordText = document.querySelector("#password");
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
